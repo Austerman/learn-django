@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    {%if notfound %}
+        <h2>{{notfound}}</h2>
+    {% else %}
+        <div class="card" style="width: 18rem;">
+                    <img src="{{user_name.avatar_url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{user_name.name}}</h5>
+                        <p class="card-text">{{user_name.location}}</p>
+                        <p class="card-text">{{user_name.location}}</p>
+                        <p class="card-text">{{user_name.location}}</p>
+
+
+                        <a href="{{user_name.html_url}}" class="btn btn-primary">访问</a>
+                    </div>
+                </div>
+    {% endif %}
+{% endblock %}
